@@ -1,0 +1,44 @@
+ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.searchCountryBox {
+    text-align: center;
+    color: chartreuse;
+    font-size: 20px;   
+    
+}
+
+.searchCountrylist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.countryInfoList{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+margin-bottom: 20px;
+background-color: darken($color: #00000077, $amount: 0);
+}
+.countryName {
+    margin: 0;
+    padding: 0;
+    
+    font-size: 60px;
+}
+
+.langList {
+    display: flex;
+    flex-direction: row;
+}
+
+.text {
+    margin-right: 15px;
+    color: cornsilk;
+    font-size: 25px;
+}

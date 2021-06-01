@@ -1,28 +1,31 @@
 body {
-  font-family: 'ZCOOL KuaiLe', cursive;  
+  font-family: 'ZCOOL KuaiLe', cursive; 
   background-image: url(../images/desk.jpg);
   background-repeat: no-repeat;
   background-size: auto;
 }
+
 form {
 width: 50%;
 display: flex;
 flex-direction: column;
-align-items: center;
 justify-content: center;
+align-items: center;
+
 margin-right: auto;
 margin-left: auto;
-margin-top: 53px;
+margin-top: 50px;
 }
 
 label {
+    width: 680px;
     color: chartreuse;;
     font-weight: bolder;
-    font-size: 32px;
+    font-size: 37px;
 }
 input {
    width: 680px;
-   height: 30px;
+   height: 50px;
    font-size:x-large;
    color: black;
 }

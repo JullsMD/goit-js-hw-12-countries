@@ -1,31 +1,23 @@
 import './sass/main.scss';
 import fetchCountries from './fetchCountries'
-import countryListRef from './templates/country-list.hbs';
+import countryListItemRef from './templates/countryListItem.hbs';
 import searchedCountryItemRef from './templates/searchedCountryItem.hbs';
-
-
 import '@pnotify/core/dist/BrightTheme.css';
 import '@pnotify/core/dist/PNotify.css';
 import {error} from '@pnotify/core/dist/PNotify.js';
 
+
+// REFS
+const searchCountryInputRef = document.querySelector('#searchCountryInput');
+const searchCountryListRef = document.querySelector('.searchCountryList');
+// Задержка
 const  debounce = require('lodash.debounce');
-
-const refs = {
-searchForm: document.querySelector('.form-control'),
-searchCountry: document.querySelector('.country-search-result'),
-};
-
-
-
-refs.searchForm.addEventListener ('input',debounce(onSearch, 500));
-
-
+searchCountryInputRef.addEventListener ('input',debounce(onSearch, 500));
+// 
 function onSearch (e){
-    refs.searchCountry.innerHTML = '';
+    searchCountryListRef.innerHTML = '';
      const searchQuery = e.target.value;
-     console.log( searchQuery,'');
-
-if(searchQuery === ' '){
+if(searchQuery === ''){
    return;
 }
   fetchCountries(searchQuery). then(data => {
@@ -43,13 +35,13 @@ if(searchQuery === ' '){
         })
     }
     else if (data.length === 1){
-        const countryDescription = searchedCountryItemRef(data)
-       refs.searchCountry.insertAdjacentHTML('beforeend',countryDescription) 
+       const countryInfo = searchedCountryItemRef(data);
+       searchCountryListRef.insertAdjacentHTML('beforeend',countryInfo);
     }
     
     else if (data.length <= 10){
-        const listOfIntendedCountries = countryListRef(data)
-        refs.searchCountry.insertAdjacentHTML('beforeend',listOfIntendedCountries )
+        const listOfIntendedCountries = countryListItemRef(data);
+        searchCountryListRef.insertAdjacentHTML('beforeend',listOfIntendedCountries);
     }
         })
 
