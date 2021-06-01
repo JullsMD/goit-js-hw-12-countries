@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+body {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  background-image: url(../images/desk.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 53px;
+}
+
+label {
+  color: chartreuse;
+  font-weight: bolder;
+  font-size: 32px;
+}
+
+input {
+  width: 680px;
+  height: 30px;
+  font-size: x-large;
+  color: black;
+}
+/*# sourceMappingURL=main.css.map */
