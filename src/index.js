@@ -16,7 +16,7 @@ searchCountryInputRef.addEventListener ('input',debounce(onSearch, 500));
 // 
 function onSearch (e){
     searchCountryListRef.innerHTML = '';
-     const searchQuery = e.target.value;
+     const searchQuery = e.target.value.trim();
 if(searchQuery === ''){
    return;
 }
